@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Para disfrutar de la magia con más tranquilidad">
+<title>Chamu Blog | Accesibilidad en Disneyland</title>
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#070b14;
+  --panel:#111a2a;
+  --panel2:#17243a;
+  --text:#f5f7ff;
+  --muted:#d2dced;
+  --accent:#8be9ff;
+  --accent2:#ffe58a;
+  --border:#49617e;
+  --link:#9be8ff;
+  --focus:#fff18a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Arial,"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  font-size:1.125rem;line-height:1.85;letter-spacing:.015em;
+}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em}
+a:hover{color:#fff;text-decoration-thickness:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:4px}
+.skip-link{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:.75rem 1rem;z-index:10}
+.skip-link:focus{left:1rem;top:1rem}
+header,main,footer{width:min(100% - 2rem, 900px);margin-inline:auto}
+header{padding:2rem 0 1rem;text-align:center}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.2;color:var(--accent);margin:.3rem 0}
+.tagline{font-size:clamp(1.15rem,2.8vw,1.5rem);font-weight:700;color:var(--accent2);margin:.8rem 0 1.3rem}
+.hero{display:block;width:100%;max-width:680px;height:auto;max-height:420px;object-fit:cover;margin:1rem auto;border:2px solid var(--border);border-radius:1rem}
+.lang-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;list-style:none;padding:0;margin:1.2rem 0}
+.lang-nav a,.home-link{
+  display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:.65rem;
+  padding:.55rem .9rem;font-weight:700
+}
+main{padding:0 0 2rem}
+.contents,.content-section,.notice{
+  background:var(--panel);border:1px solid var(--border);border-radius:1rem;padding:1.25rem clamp(1rem,3vw,1.75rem);margin:1.25rem 0
+}
+h2{font-size:clamp(1.45rem,3.4vw,2rem);line-height:1.35;color:var(--accent);border-bottom:2px solid var(--border);padding-bottom:.5rem;margin-top:0}
+h3{font-size:1.2rem;color:var(--accent2);margin-bottom:.35rem}
+p,ul,ol{margin-top:.5rem}
+li{padding-left:.15rem;margin:.35rem 0}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:1rem}
+th,td{border:1px solid var(--border);padding:.75rem;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--accent)}
+.caption,.muted{color:var(--muted);font-size:.95rem}
+.notice{border-left:5px solid var(--accent2)}
+.notice strong{color:var(--accent2)}
+.food-photo{display:block;width:min(100%,220px);height:auto;border:1px solid var(--border);border-radius:.75rem;margin:1rem auto}
+.back-top{display:inline-block;margin-top:.5rem;font-weight:700}
+footer{border-top:1px solid var(--border);padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.95rem}
+address{font-style:normal}
+@media(max-width:600px){
+ body{font-size:1.05rem;line-height:1.8}
+ header,main,footer{width:min(100% - 1rem,900px)}
+ .contents,.content-section,.notice{padding:1rem;margin:.8rem 0;border-radius:.75rem}
+ table{display:block;overflow-x:auto;white-space:normal}
+ th,td{min-width:8rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+<header>
+  <h1>Chamu Blog</h1>
+  <p class="tagline">Para disfrutar de la magia con más tranquilidad</p>
+  <img class="hero" src="images/title.jpg" alt="Ilustración de cuatro personas sonrientes caminando por un parque temático; una utiliza un bastón blanco." width="680" height="420">
+  <nav aria-label="Selección de idioma">
+    <ul class="lang-nav">
+      <li><a href="dis.html">日本語</a></li>
+<li><a href="dis_en.html">English</a></li>
+<li><a href="index.html">Elegir parque</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <nav class="contents" aria-label="Índice">
+    <h2>Índice</h2>
+    <ol><li><a href="#intro">Introducción</a></li>
+<li><a href="#das">Servicio de Acceso para Personas con Discapacidad (DAS)</a></li>
+<li><a href="#how">Cómo consultar sobre el DAS</a></li>
+<li><a href="#food">Restaurantes y alergias alimentarias</a></li>
+<li><a href="#tickets">Entradas para personas con discapacidad</a></li>
+<li><a href="#end">Conclusión</a></li></ol>
+  </nav>
+  <section class="content-section" aria-labelledby="intro">
+    <h2 id="intro">Introducción</h2>
+    <p>¡Hola! Soy Chamu. Quiero compartir mi experiencia en Tokyo Disneyland, un lugar que me encanta. Tengo una discapacidad visual y alergias alimentarias. Espero que el apoyo que recibí del personal pueda ayudar a otras personas que estén planeando una visita.</p>
+    <aside class="notice"><strong>Sobre esta página：</strong> Esta página combina mi experiencia personal con información de la guía oficial. Los servicios y procedimientos pueden cambiar, así que consulta la información oficial antes de visitar el parque.</aside>
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+  <section class="content-section" aria-labelledby="das">
+    <h2 id="das">Servicio de Acceso para Personas con Discapacidad (DAS)</h2>
+    <p>El DAS está destinado a reducir la carga de las personas que cumplen los requisitos y tienen dificultades para esperar en la fila habitual de ciertas atracciones. Consulta con un miembro del personal en la instalación correspondiente.</p>
+    <h3>Puntos importantes</h3>
+    <p>Si a la persona le resulta difícil esperar mucho tiempo en la fila, el grupo puede esperar en otro lugar fuera de ella. El DAS no reduce el tiempo de espera y, mientras esperan, no pueden utilizar otra atracción participante.</p>
+    <h3>Ejemplos de documentos aceptados</h3>
+    <p>Entre los ejemplos se incluyen certificados de discapacidad física o mental, certificado de rehabilitación, certificado de superviviente de la bomba atómica, certificado por lesiones de guerra y ciertos certificados de servicios para personas con discapacidad o enfermedades designadas. Los visitantes de fuera de Japón deben llevar documentación sobre discapacidad emitida conforme a las leyes de su país de residencia. Consulta la página oficial para ver la lista completa y actualizada.</p>
+    <aside class="notice">Las personas embarazadas, las personas mayores y quienes temporalmente no puedan esperar en la fila debido a una lesión o enfermedad pueden recibir orientación sobre otro servicio, como el Servicio de Encuentro, según su situación. No es el mismo servicio que el DAS; consulta con el personal.</aside>
+    <p><a href="https://www.tokyodisneyresort.jp/tdr/bfree/supporttool.html">Información oficial de Tokyo Disney Resort — Servicio de Acceso para Personas con Discapacidad (DAS)</a></p>
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+  <section class="content-section" aria-labelledby="how">
+    <h2 id="how">Cómo consultar sobre el DAS</h2>
+    <ol><li>Dile a un miembro del personal de una instalación participante que deseas consultar sobre el DAS.</li><li>Presenta la documentación válida de la persona (el original o una aplicación de identificación de discapacidad admitida) y las entradas de todas las personas del grupo.</li><li>Sigue las instrucciones del personal para registrarte. Es posible que tomen una fotografía para verificar la identidad.</li><li>Cuando utilices el servicio, presenta la entrada utilizada durante el registro y sigue las indicaciones del personal.</li></ol>
+    <p>Lleva la documentación necesaria y las entradas del parque. Si vas a utilizar el móvil, asegúrate de que tenga batería. Los procedimientos pueden cambiar, así que sigue las instrucciones del personal ese día.</p>
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+  <section class="content-section" aria-labelledby="food">
+    <h2 id="food">Restaurantes y alergias alimentarias</h2>
+    <p>Tengo alergia al huevo y al marisco, por lo que a veces me preocupa qué platos puedo comer. Durante mi visita, el personal me ayudó a comprobar la información y me explicó el menú de una forma más accesible. Su ayuda fue muy importante para mí.</p>
+    <img class="food-photo" src="images/food.jpg" alt="Foto del curry de Baymax." width="220" height="300" loading="lazy">
+    <aside class="notice"><strong>Aviso importante</strong> La información sobre alérgenos y las opciones disponibles varían según el restaurante y el producto. Por seguridad, informa al personal de tus alergias antes de pedir y consulta la guía oficial. Mi experiencia no garantiza que todos los restaurantes puedan ofrecer la misma ayuda.</aside>
+    <p>Es posible que Mobile Order no permita quitar o modificar ingredientes al hacer el pedido. En algunos casos, tendrás que hablar con el personal del restaurante después de realizarlo. Consulta las preguntas frecuentes oficiales con antelación. Los métodos de pago también pueden variar según el servicio y el establecimiento.</p>
+    <p><a href="https://faq.tokyodisneyresort.jp/">Información oficial de Tokyo Disney Resort — alergias y restricciones alimentarias</a></p>
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+  <section class="content-section" aria-labelledby="tickets">
+    <h2 id="tickets">Entradas para personas con discapacidad</h2>
+    <p>Tokyo Disney Resort ofrece un pasaporte de un día para personas con discapacidad. Puede comprarlo una persona que cumpla los requisitos y una persona acompañante. Cada persona necesita su propia entrada.</p>
+    <h3>Pasaporte estándar de 1 día</h3>
+    <table>
+      <caption class="caption">Precio mínimo publicado oficialmente</caption>
+      <thead><tr><th scope="col">Tipo de entrada</th><th scope="col">Adultos (18+)</th><th scope="col">Jóvenes (12–17)</th><th scope="col">Niños (4–11)</th></tr></thead>
+      <tbody><tr><th scope="row">Pasaporte estándar de 1 día</th><td>Desde ¥8.900</td><td>Desde ¥7.400</td><td>Desde ¥5.300</td></tr></tbody>
+    </table>
+    <h3>Pasaporte de 1 día para personas con discapacidad</h3>
+    <table>
+      <caption class="caption">Precio mínimo publicado oficialmente</caption>
+      <thead><tr><th scope="col">Tipo de entrada</th><th scope="col">Adultos (18+)</th><th scope="col">Jóvenes (12–17)</th><th scope="col">Niños (4–11)</th></tr></thead>
+      <tbody><tr><th scope="row">Pasaporte de 1 día para personas con discapacidad</th><td>Desde ¥7.100</td><td>Desde ¥5.900</td><td>Desde ¥4.200</td></tr></tbody>
+    </table>
+    <aside class="notice">Los precios varían según la fecha y el parque, y pueden cambiar. Las cifras anteriores son los precios mínimos publicados en la web oficial cuando se consultó en octubre de 2026; no son un presupuesto para una fecha concreta. Selecciona la fecha de visita en la web oficial antes de comprar. Los menores de 3 años entran gratis.</aside>
+    <p><a href="https://www.tokyodisneyresort.jp/ticket/index.html">Información oficial de Tokyo Disney Resort — Entradas para personas con discapacidad</a></p>
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+  <section class="content-section" aria-labelledby="end">
+    <h2 id="end">Conclusión</h2>
+    <p>Tokyo Disney Resort ofrece información y apoyo para personas con discapacidad y personas con restricciones alimentarias. Si necesitas ayuda, habla con un miembro del personal y pregunta qué opciones se adaptan a tus necesidades. Espero que mi experiencia ayude a alguien a visitar el parque con más confianza.</p>
+    <h3>Información oficial de Tokyo Disney Resort</h3>
+    <ul><li><a href="https://www.tokyodisneyresort.jp/tdr/bfree/supporttool.html">Accesibilidad y apoyo</a></li>
+<li><a href="https://www.tokyodisneyresort.jp/ticket/index.html">Entradas del parque</a></li>
+<li><a href="https://faq.tokyodisneyresort.jp/">Preguntas sobre alergias alimentarias</a></li></ul>
+    <p class="muted">Información comprobada: octubre de 2026</p>
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+</main>
+<footer>
+  <address>Publicado por Chamu<br>Chamu Blog | Blog de experiencia personal e información</address>
+</footer>
+
+<!-- OSS: axe-core (MPL-2.0), loaded from cdnjs for on-demand accessibility testing. -->
+<style>
+#axe-core-accessibility-checker{position:fixed;right:1rem;bottom:1rem;z-index:9999;max-width:min(26rem,calc(100vw - 2rem));font:1rem/1.5 system-ui,sans-serif;color:#171717}
+#axe-core-accessibility-checker button{font:inherit;font-weight:700;cursor:pointer;border:2px solid #111;border-radius:.65rem;padding:.7rem 1rem;background:#fff;color:#111;box-shadow:0 2px 12px #0003;min-height:44px}
+#axe-core-accessibility-checker button:focus-visible{outline:3px solid #1769aa;outline-offset:3px}
+#axe-core-results{margin-top:.5rem;padding:1rem;background:#fff;color:#171717;border:2px solid #333;border-radius:.65rem;box-shadow:0 2px 14px #0003;max-height:55vh;overflow:auto}
+#axe-core-results[hidden]{display:none} #axe-core-results h2{font-size:1.1rem;margin:.25rem 0 .5rem} #axe-core-results h3{font-size:1rem;margin:1rem 0 .25rem} #axe-core-results li{margin:.5rem 0} #axe-core-results a{overflow-wrap:anywhere}
+</style>
+<aside id="axe-core-accessibility-checker" aria-label="axe-core accessibility testing">
+  <button type="button" id="axe-core-run">Revisar accesibilidad</button>
+  <section id="axe-core-results" aria-live="polite" aria-atomic="true" hidden>
+    <h2>Resultados</h2><p id="axe-core-status"></p><div id="axe-core-details"></div>
+    <p>Revisa cada elemento y modifica el HTML/CSS cuando sea necesario. Las pruebas automáticas no detectan todos los problemas de accesibilidad.</p>
+  </section>
+</aside>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.10.3/axe.min.js" defer></script>
+<script>
+(function(){
+  const button = document.getElementById('axe-core-run');
+  const panel = document.getElementById('axe-core-results');
+  const status = document.getElementById('axe-core-status');
+  const details = document.getElementById('axe-core-details');
+  const labels = {running:'Analizando…', pass:'No se detectaron infracciones', violations:'Problemas detectados', incomplete:'Requiere revisión manual', loaderr:'No se pudo cargar axe-core. Comprueba tu conexión a internet.', empty:'No hay elementos.'};
+  button.addEventListener('click', async function(){
+    panel.hidden = false; status.textContent = labels.running; details.replaceChildren(); button.disabled = true;
+    try {
+      if (!window.axe) throw new Error('axe-core unavailable');
+      const results = await window.axe.run(document, {runOnly: {type: 'tag', values: ['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa','best-practice']}});
+      status.textContent = labels.violations + ': ' + results.violations.length + ' / ' + labels.incomplete + ': ' + results.incomplete.length;
+      function addGroup(title, items) {
+        const heading = document.createElement('h3'); heading.textContent = title + ' (' + items.length + ')'; details.appendChild(heading);
+        if (!items.length) { const p = document.createElement('p'); p.textContent = labels.empty; details.appendChild(p); return; }
+        const list = document.createElement('ul');
+        items.forEach(function(item) {
+          const li = document.createElement('li');
+          const strong = document.createElement('strong'); strong.textContent = item.help + ' (' + item.id + ')'; li.appendChild(strong);
+          const p = document.createElement('p'); p.textContent = item.description; li.appendChild(p);
+          const count = document.createElement('p'); count.textContent = 'Affected elements: ' + item.nodes.length; li.appendChild(count);
+          if (item.helpUrl) { const a = document.createElement('a'); a.href = item.helpUrl; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = 'How to fix'; li.appendChild(a); }
+          list.appendChild(li);
+        });
+        details.appendChild(list);
+      }
+      if (results.violations.length === 0) status.textContent = labels.pass + ' / ' + labels.incomplete + ': ' + results.incomplete.length;
+      addGroup(labels.violations, results.violations);
+      addGroup(labels.incomplete, results.incomplete);
+    } catch (error) { status.textContent = labels.loaderr; }
+    finally { button.disabled = false; }
+  });
+})();
+</script>
+
+</body>
+</html>

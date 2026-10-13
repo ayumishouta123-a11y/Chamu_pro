@@ -69,4 +69,57 @@ strong,b{color:#fff}
 <article><h2 id="summary">Conclusion</h2><p>USJ provides various services, including navigation devices and Braille maps for guests with visual impairments, Guest Support Passes, and low-allergen meals at some restaurants.</p><p>Learning about the support available in advance and asking crew members questions may help make your visit less stressful.</p><p>I hope this guide is useful to anyone planning a visit to USJ!</p><p class="back"><a href="#top">Back to top</a></p></article>
 <article><h2 id="official">Official information</h2><ul><li><a href="https://www.usj.co.jp/web/en/us/service-guide/barrier-free" target="_blank" rel="noopener noreferrer">USJ Barrier-Free Guide</a></li><li><a href="https://www.usj.co.jp/web/en/us/service-guide/barrier-free/information" target="_blank" rel="noopener noreferrer">Information by guest needs</a></li><li><a href="https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction/food-allergies" target="_blank" rel="noopener noreferrer">For guests with food allergies</a></li><li><a href="https://usjfoodallergy.usj.co.jp/en/" target="_blank" rel="noopener noreferrer">Allergen information search</a></li></ul></article>
 </main><footer><p>Chamu Blog | Universal Studios Japan</p><p>This is an independent personal guide and is not affiliated with or operated by Universal Studios Japan.</p><p><time datetime="2026-10-13">Created October 13, 2026</time></p></footer>
+
+<!-- OSS: axe-core (MPL-2.0), loaded from cdnjs for on-demand accessibility testing. -->
+<style>
+#axe-core-accessibility-checker{position:fixed;right:1rem;bottom:1rem;z-index:9999;max-width:min(26rem,calc(100vw - 2rem));font:1rem/1.5 system-ui,sans-serif;color:#171717}
+#axe-core-accessibility-checker button{font:inherit;font-weight:700;cursor:pointer;border:2px solid #111;border-radius:.65rem;padding:.7rem 1rem;background:#fff;color:#111;box-shadow:0 2px 12px #0003;min-height:44px}
+#axe-core-accessibility-checker button:focus-visible{outline:3px solid #1769aa;outline-offset:3px}
+#axe-core-results{margin-top:.5rem;padding:1rem;background:#fff;color:#171717;border:2px solid #333;border-radius:.65rem;box-shadow:0 2px 14px #0003;max-height:55vh;overflow:auto}
+#axe-core-results[hidden]{display:none} #axe-core-results h2{font-size:1.1rem;margin:.25rem 0 .5rem} #axe-core-results h3{font-size:1rem;margin:1rem 0 .25rem} #axe-core-results li{margin:.5rem 0} #axe-core-results a{overflow-wrap:anywhere}
+</style>
+<aside id="axe-core-accessibility-checker" aria-label="axe-core accessibility testing">
+  <button type="button" id="axe-core-run">Check accessibility</button>
+  <section id="axe-core-results" aria-live="polite" aria-atomic="true" hidden>
+    <h2>Scan results</h2><p id="axe-core-status"></p><div id="axe-core-details"></div>
+    <p>Review each item and update the HTML/CSS as needed. Automated checks cannot detect every accessibility issue.</p>
+  </section>
+</aside>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.10.3/axe.min.js" defer></script>
+<script>
+(function(){
+  const button = document.getElementById('axe-core-run');
+  const panel = document.getElementById('axe-core-results');
+  const status = document.getElementById('axe-core-status');
+  const details = document.getElementById('axe-core-details');
+  const labels = {running:'Scanning…', pass:'No violations detected', violations:'Detected issues', incomplete:'Needs manual review', loaderr:'Could not load axe-core. Check your internet connection.', empty:'None found.'};
+  button.addEventListener('click', async function(){
+    panel.hidden = false; status.textContent = labels.running; details.replaceChildren(); button.disabled = true;
+    try {
+      if (!window.axe) throw new Error('axe-core unavailable');
+      const results = await window.axe.run(document, {runOnly: {type: 'tag', values: ['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa','best-practice']}});
+      status.textContent = labels.violations + ': ' + results.violations.length + ' / ' + labels.incomplete + ': ' + results.incomplete.length;
+      function addGroup(title, items) {
+        const heading = document.createElement('h3'); heading.textContent = title + ' (' + items.length + ')'; details.appendChild(heading);
+        if (!items.length) { const p = document.createElement('p'); p.textContent = labels.empty; details.appendChild(p); return; }
+        const list = document.createElement('ul');
+        items.forEach(function(item) {
+          const li = document.createElement('li');
+          const strong = document.createElement('strong'); strong.textContent = item.help + ' (' + item.id + ')'; li.appendChild(strong);
+          const p = document.createElement('p'); p.textContent = item.description; li.appendChild(p);
+          const count = document.createElement('p'); count.textContent = 'Affected elements: ' + item.nodes.length; li.appendChild(count);
+          if (item.helpUrl) { const a = document.createElement('a'); a.href = item.helpUrl; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = 'How to fix'; li.appendChild(a); }
+          list.appendChild(li);
+        });
+        details.appendChild(list);
+      }
+      if (results.violations.length === 0) status.textContent = labels.pass + ' / ' + labels.incomplete + ': ' + results.incomplete.length;
+      addGroup(labels.violations, results.violations);
+      addGroup(labels.incomplete, results.incomplete);
+    } catch (error) { status.textContent = labels.loaderr; }
+    finally { button.disabled = false; }
+  });
+})();
+</script>
+
 </body></html>
