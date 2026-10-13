@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Helping everyone enjoy the magic with more confidence">
+<title>Chamu Blog | Disneyland Accessibility Experience</title>
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#070b14;
+  --panel:#111a2a;
+  --panel2:#17243a;
+  --text:#f5f7ff;
+  --muted:#d2dced;
+  --accent:#8be9ff;
+  --accent2:#ffe58a;
+  --border:#49617e;
+  --link:#9be8ff;
+  --focus:#fff18a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Arial,"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  font-size:1.125rem;line-height:1.85;letter-spacing:.015em;
+}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em}
+a:hover{color:#fff;text-decoration-thickness:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:4px}
+.skip-link{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:.75rem 1rem;z-index:10}
+.skip-link:focus{left:1rem;top:1rem}
+header,main,footer{width:min(100% - 2rem, 900px);margin-inline:auto}
+header{padding:2rem 0 1rem;text-align:center}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.2;color:var(--accent);margin:.3rem 0}
+.tagline{font-size:clamp(1.15rem,2.8vw,1.5rem);font-weight:700;color:var(--accent2);margin:.8rem 0 1.3rem}
+.hero{display:block;width:100%;max-width:680px;height:auto;max-height:420px;object-fit:cover;margin:1rem auto;border:2px solid var(--border);border-radius:1rem}
+.lang-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;list-style:none;padding:0;margin:1.2rem 0}
+.lang-nav a,.home-link{
+  display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:.65rem;
+  padding:.55rem .9rem;font-weight:700
+}
+main{padding:0 0 2rem}
+.contents,.content-section,.notice{
+  background:var(--panel);border:1px solid var(--border);border-radius:1rem;padding:1.25rem clamp(1rem,3vw,1.75rem);margin:1.25rem 0
+}
+h2{font-size:clamp(1.45rem,3.4vw,2rem);line-height:1.35;color:var(--accent);border-bottom:2px solid var(--border);padding-bottom:.5rem;margin-top:0}
+h3{font-size:1.2rem;color:var(--accent2);margin-bottom:.35rem}
+p,ul,ol{margin-top:.5rem}
+li{padding-left:.15rem;margin:.35rem 0}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:1rem}
+th,td{border:1px solid var(--border);padding:.75rem;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--accent)}
+.caption,.muted{color:var(--muted);font-size:.95rem}
+.notice{border-left:5px solid var(--accent2)}
+.notice strong{color:var(--accent2)}
+.food-photo{display:block;width:min(100%,220px);height:auto;border:1px solid var(--border);border-radius:.75rem;margin:1rem auto}
+.back-top{display:inline-block;margin-top:.5rem;font-weight:700}
+footer{border-top:1px solid var(--border);padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.95rem}
+address{font-style:normal}
+@media(max-width:600px){
+ body{font-size:1.05rem;line-height:1.8}
+ header,main,footer{width:min(100% - 1rem,900px)}
+ .contents,.content-section,.notice{padding:1rem;margin:.8rem 0;border-radius:.75rem}
+ table{display:block;overflow-x:auto;white-space:normal}
+ th,td{min-width:8rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+  <h1>Chamu Blog</h1>
+  <p class="tagline">Helping everyone enjoy the magic with more confidence</p>
+  <img class="hero" src="images/title.jpg" alt="Illustration of four smiling people walking in a theme park; one person uses a white cane." width="680" height="420">
+  <nav aria-label="Language selection">
+    <ul class="lang-nav">
+      <li><a href="dis.html">日本語</a></li>
+<li><a href="dis_es.html">Español</a></li>
+<li><a href="index.html">Choose a park</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <nav class="contents" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol><li><a href="#intro">Introduction</a></li>
+<li><a href="#das">Disability Access Service (DAS)</a></li>
+<li><a href="#how">How to ask for DAS</a></li>
+<li><a href="#food">Restaurants and food allergies</a></li>
+<li><a href="#tickets">Tickets for guests with disabilities</a></li>
+<li><a href="#end">Conclusion</a></li></ol>
+  </nav>
+  <section class="content-section" aria-labelledby="intro">
+    <h2 id="intro">Introduction</h2>
+    <p>Hello, I’m Chamu. I’d like to share my experience visiting Tokyo Disneyland, a place I love. I have a visual impairment and food allergies. I hope the support I received from cast members may help others who are planning a visit.</p>
+    <aside class="notice"><strong>About this page：</strong> This page combines my personal experience with information from official guidance. Services and operating procedures can change, so please check the official information before your visit.</aside>
+    <a class="back-top" href="#top">Back to the top</a>
+  </section>
+  <section class="content-section" aria-labelledby="das">
+    <h2 id="das">Disability Access Service (DAS)</h2>
+    <p>DAS is intended to reduce the burden for eligible guests who have difficulty waiting in the regular queue at participating attractions. Ask a cast member at the facility about eligibility and use.</p>
+    <h3>Important points</h3>
+    <p>When the guest has difficulty waiting in the queue for a long time, the group may wait somewhere outside the queue. DAS does not shorten the waiting time, and the group cannot use another participating attraction while waiting.</p>
+    <h3>Examples of accepted documentation</h3>
+    <p>Examples include a physical disability certificate, mental disability certificate, rehabilitation certificate, atomic bomb survivor’s certificate, war-injury certificate, and certain disability-service or designated intractable-disease certificates. Guests visiting from outside Japan should bring disability documentation issued under the laws of their country of residence. Check the official page for the full current list.</p>
+    <aside class="notice">Pregnant guests, older guests, and guests temporarily unable to wait in line because of an injury or illness may be directed to a different service, such as the Meet-Up Service, depending on their circumstances. This is separate from DAS; ask a cast member for guidance.</aside>
+    <p><a href="https://www.tokyodisneyresort.jp/tdr/bfree/supporttool.html">Official Tokyo Disney Resort information — Disability Access Service (DAS)</a></p>
+    <a class="back-top" href="#top">Back to the top</a>
+  </section>
+  <section class="content-section" aria-labelledby="how">
+    <h2 id="how">How to ask for DAS</h2>
+    <ol><li>Tell a cast member at a participating facility that you would like to ask about DAS.</li><li>Present the guest’s eligible documentation (the original or a supported disability ID app) and park tickets for everyone in the group.</li><li>Follow the cast member’s instructions to register. A photo may be taken to verify the guest’s identity.</li><li>When using the service, present the park ticket used for registration and follow the cast member’s instructions.</li></ol>
+    <p>Bring the required documentation and park tickets. If you plan to use your phone, make sure it is charged. Procedures may change, so follow the cast members’ instructions on the day.</p>
+    <a class="back-top" href="#top">Back to the top</a>
+  </section>
+  <section class="content-section" aria-labelledby="food">
+    <h2 id="food">Restaurants and food allergies</h2>
+    <p>I have egg and seafood allergies, so I sometimes worry about which menu items I can eat. During my visit, cast members helped me check information and made the menu easier for me to understand. Their support made a real difference.</p>
+    <img class="food-photo" src="images/food.jpg" alt="Photo of Baymax curry." width="220" height="300" loading="lazy">
+    <aside class="notice"><strong>Important safety note</strong> Allergy information and available options vary by restaurant and item. For your safety, tell a cast member about your allergies before ordering and check the official food-allergy guidance. My experience does not guarantee that every restaurant can provide the same support.</aside>
+    <p>Mobile Order may not allow ingredient removal or changes at the time of ordering. In some cases, you may need to speak with a cast member at the restaurant after placing the order. Check the official FAQ in advance. Payment options may also vary by service and location.</p>
+    <p><a href="https://faq.tokyodisneyresort.jp/">Official Tokyo Disney Resort information — food allergies and dietary restrictions</a></p>
+    <a class="back-top" href="#top">Back to the top</a>
+  </section>
+  <section class="content-section" aria-labelledby="tickets">
+    <h2 id="tickets">Tickets for guests with disabilities</h2>
+    <p>Tokyo Disney Resort offers a 1-Day Passport for guests with disabilities. It can be purchased by an eligible guest and one accompanying guest. Each person needs their own ticket.</p>
+    <h3>Standard 1-Day Passport</h3>
+    <table>
+      <caption class="caption">Official minimum listed price</caption>
+      <thead><tr><th scope="col">Ticket type</th><th scope="col">Adult (18+)</th><th scope="col">Junior (12–17)</th><th scope="col">Child (4–11)</th></tr></thead>
+      <tbody><tr><th scope="row">Standard 1-Day Passport</th><td>From ¥8,900</td><td>From ¥7,400</td><td>From ¥5,300</td></tr></tbody>
+    </table>
+    <h3>1-Day Passport for guests with disabilities</h3>
+    <table>
+      <caption class="caption">Official minimum listed price</caption>
+      <thead><tr><th scope="col">Ticket type</th><th scope="col">Adult (18+)</th><th scope="col">Junior (12–17)</th><th scope="col">Child (4–11)</th></tr></thead>
+      <tbody><tr><th scope="row">1-Day Passport for guests with disabilities</th><td>From ¥7,100</td><td>From ¥5,900</td><td>From ¥4,200</td></tr></tbody>
+    </table>
+    <aside class="notice">Ticket prices vary by date and park and may change. The figures above are the minimum prices listed on the official website when checked in October 2026; they are not a quote for a specific date. Select your visit date on the official website before purchasing. Children aged 3 and under enter free.</aside>
+    <p><a href="https://www.tokyodisneyresort.jp/ticket/index.html">Official Tokyo Disney Resort information — Tickets for guests with disabilities</a></p>
+    <a class="back-top" href="#top">Back to the top</a>
+  </section>
+  <section class="content-section" aria-labelledby="end">
+    <h2 id="end">Conclusion</h2>
+    <p>Tokyo Disney Resort provides a range of information and support for guests with disabilities and guests with dietary restrictions. If you need help, speak to a cast member and ask which support options fit your needs. I hope sharing my experience helps someone feel more confident about visiting.</p>
+    <h3>Official Tokyo Disney Resort information</h3>
+    <ul><li><a href="https://www.tokyodisneyresort.jp/tdr/bfree/supporttool.html">Accessibility support</a></li>
+<li><a href="https://www.tokyodisneyresort.jp/ticket/index.html">Park tickets</a></li>
+<li><a href="https://faq.tokyodisneyresort.jp/">Food-allergy and dietary FAQ</a></li></ul>
+    <p class="muted">Information checked: October 2026</p>
+    <a class="back-top" href="#top">Back to the top</a>
+  </section>
+</main>
+<footer>
+  <address>Posted by Chamu<br>Chamu Blog | A personal experience and information blog</address>
+</footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chamu Blog｜ユニバーサル・スタジオ・ジャパン編</title>
+  <style>
+    :root { --navy:#162b4d; --blue:#dff5ff; --pink:#fff0f6; --ink:#202733; --link:#0645ad; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; background:#f3f8ff; color:var(--ink); font-family: "Yu Gothic", "Meiryo", sans-serif; line-height:1.9; }
+    a { color:var(--link); text-underline-offset:.18em; }
+    a:focus-visible { outline:3px solid #e04b91; outline-offset:3px; }
+    header { padding:2rem 1rem; text-align:center; background:linear-gradient(135deg,#dff5ff,#fff0f6); border-bottom:4px solid #b9e8f7; }
+    h1 { margin:.2rem 0; font-size:clamp(2rem,5vw,3rem); color:var(--navy); }
+    header h2 { font-size:1.2rem; margin:.4rem auto 1rem; }
+    .hero { max-width:760px; margin:1rem auto; padding:1.2rem; background:#fff; border:2px dashed #86cde3; border-radius:1rem; }
+    .hero p { margin:.2rem; }
+    nav, main, footer { max-width:900px; margin:1.5rem auto; padding:0 1rem; }
+    .toc, article { background:white; border:1px solid #d5e3f0; border-radius:1rem; padding:1.2rem clamp(1rem,3vw,2rem); margin-bottom:1.4rem; box-shadow:0 3px 12px #16365a0b; }
+    .toc h2, article h2 { color:var(--navy); border-bottom:3px solid #b9e8f7; padding-bottom:.4rem; }
+    h3 { color:#9b285e; margin-bottom:.2rem; }
+    .note { background:#fff5d9; border-left:5px solid #e6ad35; padding:.8rem 1rem; border-radius:.3rem; }
+    .info { background:#eef9ff; padding:.8rem 1rem; border-radius:.5rem; }
+    ul, ol { padding-left:1.5rem; }
+    table { border-collapse:collapse; width:100%; margin:1rem 0; }
+    th, td { border:1px solid #9aaec1; padding:.65rem; text-align:left; vertical-align:top; }
+    th { background:#e4f5fc; }
+    .back { text-align:right; font-size:.95rem; }
+    footer { border-top:1px solid #c5d5e4; padding-top:1rem; font-size:.9rem; }
+    .source-list li { overflow-wrap:anywhere; }
+    @media (max-width:600px) { body { font-size:1rem; } table { display:block; overflow-x:auto; } }
+  
+/* Chamu Blog: high-contrast dark theme */
+:root{color-scheme:dark;--bg:#080b12;--panel:#121824;--panel2:#182232;--ink:#f7f9ff;--muted:#d0d8e7;--line:#45536a;--cyan:#70e7ff;--yellow:#ffe66d;--pink:#ff9fda;--link:#8feaff}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:1rem}
+body{background:radial-gradient(ellipse at 50% 0%,#17243b 0%,#080b12 58%);background-color:var(--bg);color:var(--ink);font-size:1.08rem;line-height:1.9;letter-spacing:.015em}
+::selection{background:var(--yellow);color:#080b12}
+a{color:var(--link);font-weight:700;text-decoration-thickness:.12em;text-underline-offset:.2em}
+a:visited{color:#d5b7ff}
+a:hover{color:var(--yellow);text-decoration-thickness:.18em}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:4px solid var(--yellow);outline-offset:5px;border-radius:.25rem}
+header{background:linear-gradient(135deg,#111a2b 0%,#1a1930 55%,#102432 100%);color:var(--ink);border-bottom:3px solid var(--cyan);padding:clamp(2rem,6vw,4rem) 1rem;box-shadow:0 10px 40px #0008}
+h1{color:#fff!important;text-shadow:0 0 22px #70e7ff30;letter-spacing:.025em;line-height:1.25}
+h2{color:var(--cyan)!important;line-height:1.45}
+h3{color:var(--yellow)!important;line-height:1.5}
+p,li,dt,dd,figcaption,small{color:var(--ink)}
+.hero,.toc,article,.card,.choices .card{background:linear-gradient(145deg,#151e2c,#10151f);color:var(--ink);border:1px solid var(--line);border-radius:1.1rem;box-shadow:0 10px 28px #0005}
+.hero{border:2px solid #4d8395;border-left:6px solid var(--cyan)}
+.toc,article,.card{padding:clamp(1.15rem,3vw,2rem)}
+.toc h2,article h2{border-bottom:2px solid #3c6f81;padding-bottom:.55rem}
+.note,.info{background:#222b39!important;color:var(--ink)!important;border:1px solid #65748b;border-left:6px solid var(--yellow);border-radius:.55rem;padding:1rem 1.1rem}
+.note *, .info *{color:var(--ink)!important}
+button,.jump,.button,.card a{display:inline-block;background:#202e40;color:#fff!important;border:2px solid var(--cyan);border-radius:.75rem;padding:.7rem 1rem;font-weight:800;text-decoration:none;line-height:1.5}
+button:hover,.jump:hover,.button:hover,.card a:hover{background:#294358;color:var(--yellow)!important;border-color:var(--yellow)}
+hr{border:0;border-top:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;margin:1.2rem 0;background:#111722;color:var(--ink)}th,td{border:1px solid #58667c;padding:.75rem;text-align:left;vertical-align:top;color:var(--ink)}th{background:#24364b;color:#fff;font-weight:800}tr:nth-child(even) td{background:#171f2d}
+footer{border-top:1px solid var(--line);color:var(--muted);padding-top:1.2rem}footer p,footer small{color:var(--muted)}
+nav a{margin-right:.65rem;margin-bottom:.45rem}
+strong,b{color:#fff}
+:target{outline:2px solid var(--cyan);outline-offset:5px}
+@media(max-width:650px){body{font-size:1rem;line-height:1.85}header{padding:2rem 1rem}nav,main,footer{padding-left:1rem;padding-right:1rem}.choices{grid-template-columns:1fr}table{display:block;overflow-x:auto;max-width:100%}a,button,.jump{min-height:44px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+</style>
+</head>
+<body id="top">
+<header>
+  <h1>Chamu Blog</h1>
+  <h2>～ユニバーサル・スタジオ・ジャパンも、みんなで楽しむために～</h2>
+  <div class="hero">
+    <p><strong>USJのバリアフリーサービス体験前ガイド</strong></p>
+    <p>視覚障害や食物アレルギーがある人も、事前にサービスを知って安心してお出かけしよう！</p>
+    <p>※このページは個人が公式情報をもとにまとめた案内です。USJ公式サイトではありません。</p>
+  </div>
+  <nav aria-label="言語切り替えと施設選択" style="margin:1rem auto;padding:0;text-align:center;">
+    <strong>言語：</strong> <a href="usj.html" lang="ja">日本語</a> ｜ <a href="usj_en.html" lang="en">English</a> ｜ <a href="usj_es.html" lang="es">Español</a>
+    <br><a href="index.html">施設選択トップ（ディズニー／USJ）</a>
+  </nav>
+</header>
+
+<nav class="toc" aria-label="目次">
+  <h2>目次</h2>
+  <ul>
+    <li><a href="#intro">はじめに</a></li>
+    <li><a href="#vision">視覚障害のある方向けサービス</a></li>
+    <li><a href="#support">ゲストサポート・パス</a></li>
+    <li><a href="#food">食物アレルギーへの対応</a></li>
+    <li><a href="#ticket">障がい者向け割引スタジオ・パス</a></li>
+    <li><a href="#prepare">行く前に確認したいこと</a></li>
+    <li><a href="#summary">まとめ</a></li>
+    <li><a href="#official">公式情報リンク</a></li>
+  </ul>
+</nav>
+
+<main>
+  <article>
+    <h2 id="intro">はじめに</h2>
+    <p>こんにちは、ちゃむです！私は視覚障害があり、食物アレルギーもあります。</p>
+    <p>テーマパークに行くときは、園内で迷わないか、メニューを確認できるか、安心してアトラクションを楽しめるかなど、不安になることがあります。</p>
+    <p>そこで今回は、ユニバーサル・スタジオ・ジャパン（USJ）の公式サイトで案内されているバリアフリーサービスや食物アレルギー対応をまとめました。</p>
+    <p class="note">サービスの内容・利用条件・料金は変更される場合があります。来場前に必ず公式サイトで最新情報を確認してください。</p>
+    <p class="back"><a href="#top">ページの先頭に戻る</a></p>
+  </article>
+
+  <article>
+    <h2 id="vision">視覚障害のある方向けサービス</h2>
+    <p>USJでは、視覚に障害のあるゲスト向けに、園内での移動や情報確認を助けるサービスが案内されています。</p>
+    <h3>1. 視覚障がい者向けナビゲーションデバイス</h3>
+    <ul>
+      <li>場所：パーク内エントランス左側のゲストサービス</li>
+      <li>靴に専用デバイスを装着し、足に伝わる振動で目的地までの歩行を案内するシステムです。</li>
+      <li>公式サイト記載のレンタル料金：1台1,000円（非課税）</li>
+    </ul>
+    <h3>2. 点字マップ・触知図</h3>
+    <ul>
+      <li><strong>点字マップ：</strong>点字と活字で、アトラクション・レストラン・ショップなどの場所や特徴を確認できます。ゲストサービスで用意されています。</li>
+      <li><strong>触知図：</strong>パーク内の主な建物を点字で示した案内です。</li>
+    </ul>
+    <h3>3. サポートシール</h3>
+    <p>胸などの目立つ場所に貼ると、クルーから積極的に声をかけてもらえるシールです。ゲストサービスで申し出ます。なお、アトラクションの優先入場などの特典はありません。</p>
+    <p class="info">場所が分からない、案内をお願いしたいなど困ったときは、ゲストサービスや近くのクルーに相談してみましょう。</p>
+    <p class="back"><a href="#top">ページの先頭に戻る</a></p>
+  </article>
+
+  <article>
+    <h2 id="support">ゲストサポート・パス</h2>
+    <p>待ち列に並ぶことが難しい障がいのある方で、障がい者手帳をお持ちの方は、ゲストサポート・パスを利用できる場合があります。</p>
+    <h3>どんなサービス？</h3>
+    <p>アトラクションの待ち時間を、待ち列以外の場所で過ごせるようにするサービスです。</p>
+    <h3>どこで相談する？</h3>
+    <ul>
+      <li>ゲストサービス</li>
+      <li>各アトラクションのエントランス</li>
+    </ul>
+    <p class="note"><strong>注意：</strong>ゲストサポート・パスは、待ち時間を別の場所で過ごすためのもので、優先入場を保証するものではありません。利用条件や手続きは公式案内を確認してください。</p>
+    <p class="back"><a href="#top">ページの先頭に戻る</a></p>
+  </article>
+
+  <article>
+    <h2 id="food">食物アレルギーへの対応</h2>
+    <p>USJでは、一部のレストランで「低アレルゲンメニュー」を用意しています。また、レストランやカートの主なメニューについて、特定原材料等28品目のアレルゲン情報を確認できます。</p>
+    <h3>低アレルゲンメニュー</h3>
+    <p>公式サイトでは、特定原材料8品目（卵・乳・小麦・えび・かに・そば・落花生・くるみ）を含む原材料を使用しないメニューとして案内されています。</p>
+    <h3>注文前に気をつけたいこと</h3>
+    <ol>
+      <li>利用するレストランとメニューの最新情報を公式サイトで確認する。</li>
+      <li>入店または入店待ち列に並ぶ前に、レストランのクルーへ最新の原材料情報を確認する。</li>
+      <li>調理工程で意図せずアレルゲンが混入する可能性もあるため、説明をよく確認して自分で最終判断する。</li>
+    </ol>
+    <p class="note">低アレルゲンメニューが、すべてのアレルギーに対応するとは限りません。アレルギーがある場合は、必ず最新の公式情報と現地クルーの説明を確認してください。</p>
+    <p class="back"><a href="#top">ページの先頭に戻る</a></p>
+  </article>
+
+  <article>
+    <h2 id="ticket">障がい者向け割引スタジオ・パス</h2>
+    <p>USJには、対象となる障がい者手帳をお持ちの方などを対象とした「障がい者向け割引スタジオ・パス」があります。</p>
+    <table>
+      <thead><tr><th scope="col">区分</th><th scope="col">公式チケットページの表示価格</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">大人</th><td>4,700円～</td></tr>
+        <tr><th scope="row">子ども</th><td>3,200円～</td></tr>
+      </tbody>
+    </table>
+    <p>価格は日付や販売条件によって変わる場合があります。購入時には、パーク指定の障がい者手帳の原本またはミライロIDなど、公式サイトで指定された証明書の確認・アップロードが必要です。</p>
+    <p class="note">上記は公式チケットページで確認できた「～」表示の参考価格です。購入前に必ず最新の販売画面で対象条件と価格を確認してください。</p>
+    <p><a href="https://www.usj.co.jp/web/ja/jp/tickets/lineup" target="_blank" rel="noopener noreferrer">USJ公式：各種チケット</a> ／ <a href="https://www.usj.co.jp/web/ja/jp/tickets/buy/howto/certificate-upload" target="_blank" rel="noopener noreferrer">証明書のアップロードについて</a></p>
+    <p class="back"><a href="#top">ページの先頭に戻る</a></p>
+  </article>
+
+  <article>
+    <h2 id="prepare">行く前に確認したいこと</h2>
+    <ul>
+      <li>公式サイトでバリアフリーサービスの場所・利用条件を確認する。</li>
+      <li>食物アレルギーがある場合は、食べられるメニューやアレルゲン情報を事前に調べる。</li>
+      <li>スマートフォンを使う場合は、充電や必要なアプリを準備する。</li>
+      <li>当日困ったときは、ゲストサービスや近くのクルーに相談する。</li>
+      <li>サービスや価格は変更される可能性があるため、来場直前にも公式情報を確認する。</li>
+    </ul>
+    <p class="back"><a href="#top">ページの先頭に戻る</a></p>
+  </article>
+
+  <article>
+    <h2 id="summary">まとめ</h2>
+    <p>USJには、視覚障害のある方に向けたナビゲーションデバイスや点字マップ、ゲストサポート・パス、食物アレルギーに配慮したメニューなど、さまざまなサービスがあります。</p>
+    <p>自分に必要なサポートを事前に調べておき、分からないことはクルーに相談することで、当日の不安を減らせるかもしれません。</p>
+    <p>このページが、USJへ行くことを考えている方の参考になればうれしいです！</p>
+    <p class="back"><a href="#top">ページの先頭に戻る</a></p>
+  </article>
+
+  <article>
+    <h2 id="official">公式情報リンク</h2>
+    <p>内容の更新や詳しい利用条件は、以下のUSJ公式ページで確認してください。</p>
+    <ul class="source-list">
+      <li><a href="https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/" target="_blank" rel="noopener noreferrer">バリアフリーサービス</a></li>
+      <li><a href="https://www.usj.co.jp/web/ja/jp/service-guide/seeing-disabilities" target="_blank" rel="noopener noreferrer">視覚に障がいのある方</a></li>
+      <li><a href="https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/dietary-restriction/food-allergies" target="_blank" rel="noopener noreferrer">食物アレルギーをお持ちの方へ</a></li>
+      <li><a href="https://www.usj.co.jp/web/ja/jp/tickets/lineup" target="_blank" rel="noopener noreferrer">各種チケット・障がい者向け割引スタジオ・パス</a></li>
+    </ul>
+  </article>
+</main>
+
+<footer>
+  <p>Chamu Blog｜ユニバーサル・スタジオ・ジャパン編</p>
+  <p>※このサイトは個人による情報整理を目的としたもので、ユニバーサル・スタジオ・ジャパンの公式サイトではありません。</p>
+  <p><time datetime="2026-10-13">2026年10月13日作成</time></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chamu Blog | Universal Studios Japan</title>
+<style>
+:root{--navy:#162b4d;--ink:#202733;--link:#0645ad}*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#f3f8ff;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.85}
+a{color:var(--link);text-underline-offset:.18em}a:focus-visible{outline:3px solid #e04b91;outline-offset:3px}
+header{padding:2rem 1rem;text-align:center;background:linear-gradient(135deg,#dff5ff,#fff0f6);border-bottom:4px solid #b9e8f7}
+h1{margin:.2rem 0;font-size:clamp(2rem,5vw,3rem);color:var(--navy)}header h2{font-size:1.2rem}
+.hero{max-width:760px;margin:1rem auto;padding:1.2rem;background:#fff;border:2px dashed #86cde3;border-radius:1rem}
+nav,main,footer{max-width:900px;margin:1.5rem auto;padding:0 1rem}.toc,article{background:#fff;border:1px solid #d5e3f0;border-radius:1rem;padding:1.2rem clamp(1rem,3vw,2rem);margin-bottom:1.4rem;box-shadow:0 3px 12px #16365a0b}
+.toc h2,article h2{color:var(--navy);border-bottom:3px solid #b9e8f7;padding-bottom:.4rem}h3{color:#9b285e;margin-bottom:.2rem}
+.note{background:#fff5d9;border-left:5px solid #e6ad35;padding:.8rem 1rem;border-radius:.3rem}.info{background:#eef9ff;padding:.8rem 1rem;border-radius:.5rem}
+ul,ol{padding-left:1.5rem}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #9aaec1;padding:.65rem;text-align:left;vertical-align:top}th{background:#e4f5fc}.back{text-align:right;font-size:.95rem}footer{border-top:1px solid #c5d5e4;padding-top:1rem;font-size:.9rem}
+@media(max-width:600px){table{display:block;overflow-x:auto}}
+
+/* Chamu Blog: high-contrast dark theme */
+:root{color-scheme:dark;--bg:#080b12;--panel:#121824;--panel2:#182232;--ink:#f7f9ff;--muted:#d0d8e7;--line:#45536a;--cyan:#70e7ff;--yellow:#ffe66d;--pink:#ff9fda;--link:#8feaff}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:1rem}
+body{background:radial-gradient(ellipse at 50% 0%,#17243b 0%,#080b12 58%);background-color:var(--bg);color:var(--ink);font-size:1.08rem;line-height:1.9;letter-spacing:.015em}
+::selection{background:var(--yellow);color:#080b12}
+a{color:var(--link);font-weight:700;text-decoration-thickness:.12em;text-underline-offset:.2em}
+a:visited{color:#d5b7ff}
+a:hover{color:var(--yellow);text-decoration-thickness:.18em}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:4px solid var(--yellow);outline-offset:5px;border-radius:.25rem}
+header{background:linear-gradient(135deg,#111a2b 0%,#1a1930 55%,#102432 100%);color:var(--ink);border-bottom:3px solid var(--cyan);padding:clamp(2rem,6vw,4rem) 1rem;box-shadow:0 10px 40px #0008}
+h1{color:#fff!important;text-shadow:0 0 22px #70e7ff30;letter-spacing:.025em;line-height:1.25}
+h2{color:var(--cyan)!important;line-height:1.45}
+h3{color:var(--yellow)!important;line-height:1.5}
+p,li,dt,dd,figcaption,small{color:var(--ink)}
+.hero,.toc,article,.card,.choices .card{background:linear-gradient(145deg,#151e2c,#10151f);color:var(--ink);border:1px solid var(--line);border-radius:1.1rem;box-shadow:0 10px 28px #0005}
+.hero{border:2px solid #4d8395;border-left:6px solid var(--cyan)}
+.toc,article,.card{padding:clamp(1.15rem,3vw,2rem)}
+.toc h2,article h2{border-bottom:2px solid #3c6f81;padding-bottom:.55rem}
+.note,.info{background:#222b39!important;color:var(--ink)!important;border:1px solid #65748b;border-left:6px solid var(--yellow);border-radius:.55rem;padding:1rem 1.1rem}
+.note *, .info *{color:var(--ink)!important}
+button,.jump,.button,.card a{display:inline-block;background:#202e40;color:#fff!important;border:2px solid var(--cyan);border-radius:.75rem;padding:.7rem 1rem;font-weight:800;text-decoration:none;line-height:1.5}
+button:hover,.jump:hover,.button:hover,.card a:hover{background:#294358;color:var(--yellow)!important;border-color:var(--yellow)}
+hr{border:0;border-top:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;margin:1.2rem 0;background:#111722;color:var(--ink)}th,td{border:1px solid #58667c;padding:.75rem;text-align:left;vertical-align:top;color:var(--ink)}th{background:#24364b;color:#fff;font-weight:800}tr:nth-child(even) td{background:#171f2d}
+footer{border-top:1px solid var(--line);color:var(--muted);padding-top:1.2rem}footer p,footer small{color:var(--muted)}
+nav a{margin-right:.65rem;margin-bottom:.45rem}
+strong,b{color:#fff}
+:target{outline:2px solid var(--cyan);outline-offset:5px}
+@media(max-width:650px){body{font-size:1rem;line-height:1.85}header{padding:2rem 1rem}nav,main,footer{padding-left:1rem;padding-right:1rem}.choices{grid-template-columns:1fr}table{display:block;overflow-x:auto;max-width:100%}a,button,.jump{min-height:44px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+</style></head>
+<body id="top">
+<header>
+<h1>Chamu Blog</h1><h2>Un Universal Studios Japan más accesible para todos</h2>
+<div class="hero"><p><strong>Guía de accesibilidad de Universal Studios Japan (USJ)</strong></p><p>Conoce los servicios de apoyo antes de tu visita, incluida la información para personas con discapacidad visual y alergias alimentarias.</p><p><strong>Aviso:</strong> Esta es una guía personal basada en información oficial; no es el sitio web oficial de USJ.</p></div>
+<nav aria-label="Versiones por idioma y selección del parque" style="margin:1rem auto;padding:0;text-align:center"><strong>Idioma:</strong> <a href="usj.html" lang="ja">日本語</a> | <a href="usj_en.html" lang="en">English</a> | <a href="usj_es.html" lang="es">Español</a><br><a href="index.html">Elegir parque (Disney / USJ)</a></nav>
+</header>
+<nav class="toc" aria-label="Índice"><h2>Índice</h2><ul>
+<li><a href="#intro">Introducción</a></li><li><a href="#vision">Servicios para personas con discapacidad visual</a></li><li><a href="#support">Pase de apoyo para visitantes</a></li><li><a href="#food">Alergias alimentarias</a></li><li><a href="#ticket">Entrada con descuento para personas con discapacidad</a></li><li><a href="#prepare">Antes de la visita</a></li><li><a href="#summary">Conclusión</a></li><li><a href="#official">Información oficial</a></li></ul></nav>
+<main>
+<article><h2 id="intro">Introducción</h2><p>¡Hola! Soy Chamu. Tengo una discapacidad visual y también alergias alimentarias.</p><p>Al visitar un parque temático, a veces me preocupa orientarme, leer los menús o disfrutar de las atracciones con tranquilidad. En esta página resumo los servicios de accesibilidad y la información sobre alergias alimentarias publicados por Universal Studios Japan (USJ).</p><p class="note">Los servicios, los requisitos y los precios pueden cambiar. Consulta la web oficial antes de visitar el parque.</p><p class="back"><a href="#top">Volver al principio</a></p></article>
+<article><h2 id="vision">Servicios para personas con discapacidad visual</h2><p>USJ informa de varios servicios que pueden ayudar a las personas con discapacidad visual a orientarse y acceder a información dentro del parque.</p>
+<h3>1. Dispositivo de navegación para personas con discapacidad visual</h3><ul><li>Ubicación: Guest Services, a la izquierda de la entrada del parque.</li><li>Se coloca un dispositivo especial en el calzado y las vibraciones que se sienten en los pies ayudan a seguir la ruta hacia el destino.</li><li>Precio de alquiler indicado oficialmente: 1.000 yenes por dispositivo (exento de impuestos).</li></ul>
+<h3>2. Mapas en braille y mapas táctiles</h3><ul><li><strong>Mapa en braille:</strong> Incluye braille y texto impreso, y muestra ubicaciones como atracciones y restaurantes. Puedes solicitarlo en Guest Services. Si lo necesitas antes de la visita, consulta con antelación al centro de información.</li><li><strong>Mapa táctil:</strong> Ofrece información táctil sobre edificios e instalaciones principales del parque.</li></ul>
+<h3>3. Pegatina de apoyo (Support Sticker)</h3><p>Se puede llevar una pegatina en un lugar visible, por ejemplo en el pecho, para que el personal sepa que quizá necesites ayuda. Está disponible en Guest Services. No da prioridad para entrar en las atracciones.</p><p class="info">Si necesitas ayuda para encontrar un lugar o entender información, acude a Guest Services o pregunta a un miembro del personal cercano.</p><p class="back"><a href="#top">Volver al principio</a></p></article>
+<article><h2 id="support">Pase de apoyo para visitantes (Guest Support Pass)</h2><p>Las personas cuya discapacidad dificulta esperar en una fila y que tienen un certificado de discapacidad admitido pueden reunir los requisitos para usar el Guest Support Pass.</p><h3>¿Cómo funciona?</h3><p>Permite a los visitantes que cumplen los requisitos esperar en otro lugar durante el tiempo de espera de una atracción, en vez de permanecer en la fila habitual.</p><h3>¿Dónde se solicita información?</h3><ul><li>Guest Services</li><li>La entrada de cada atracción</li></ul><p class="note"><strong>Importante:</strong> Este pase no permite saltarse la fila ni garantiza entrada prioritaria. Consulta las reglas y los requisitos oficiales antes de tu visita.</p><p class="back"><a href="#top">Volver al principio</a></p></article>
+<article><h2 id="food">Alergias alimentarias</h2><p>Algunos restaurantes de USJ ofrecen menús de baja alergenicidad. También se puede consultar información sobre 28 ingredientes específicos en los principales platos, de acuerdo con las normas japonesas de etiquetado de alimentos.</p><h3>Menús de baja alergenicidad</h3><p>Estos menús se preparan sin los siguientes ocho ingredientes especificados: huevo, leche, trigo, gambas, cangrejo, trigo sarraceno, cacahuetes y nueces.</p><h3>Antes de pedir comida</h3><ol><li>Consulta en la web oficial la información más reciente sobre menús y restaurantes.</li><li>Antes de entrar en la fila, pregunta al personal del restaurante por la información actualizada sobre alérgenos.</li><li>Revisa cuidadosamente la información y toma tu propia decisión final. Puede haber contacto cruzado durante la preparación.</li></ol><p class="note">Un menú de baja alergenicidad no es necesariamente seguro para todas las alergias. Comprueba siempre la información oficial más reciente y habla con el personal antes de pedir.</p><p class="back"><a href="#top">Volver al principio</a></p></article>
+<article><h2 id="ticket">Entrada con descuento para personas con discapacidad</h2><p>USJ ofrece una entrada con descuento para visitantes que cumplen los requisitos relacionados con la discapacidad.</p><table><thead><tr><th scope="col">Categoría</th><th scope="col">Precio de referencia mostrado en la página oficial de entradas</th></tr></thead><tbody><tr><th scope="row">Adultos</th><td>Desde 4.700 yenes</td></tr><tr><th scope="row">Niños</th><td>Desde 3.200 yenes</td></tr></tbody></table><p>El precio puede variar según la fecha y las condiciones de venta. El proceso de compra puede requerir el certificado de discapacidad original admitido o un certificado digital compatible, como Mirairo ID. Consulta la página oficial para confirmar los documentos y requisitos aceptados.</p><p class="note">Estos son precios de referencia «desde»; no se garantiza que sean válidos para todas las fechas. Confirma el precio y los requisitos actuales antes de comprar.</p><p><a href="https://www.usj.co.jp/web/ja/jp/tickets/lineup" target="_blank" rel="noopener noreferrer">Entradas oficiales de USJ (japonés)</a> | <a href="https://www.usj.co.jp/web/ja/jp/tickets/buy/howto/certificate-upload" target="_blank" rel="noopener noreferrer">Información sobre cómo subir el certificado (japonés)</a></p><p class="back"><a href="#top">Volver al principio</a></p></article>
+<article><h2 id="prepare">Antes de la visita</h2><ul><li>Consulta la guía oficial de accesibilidad y dónde se ofrecen los servicios.</li><li>Si tienes alergias alimentarias, revisa los menús y la información de alérgenos con antelación.</li><li>Carga el teléfono y prepara las aplicaciones que necesites.</li><li>Si necesitas ayuda ese día, pregunta en Guest Services o a un miembro del personal.</li><li>Vuelve a comprobar la información oficial poco antes de la visita, porque los servicios y precios pueden cambiar.</li></ul><p class="back"><a href="#top">Volver al principio</a></p></article>
+<article><h2 id="summary">Conclusión</h2><p>USJ ofrece distintos servicios, como dispositivos de navegación y mapas en braille para personas con discapacidad visual, pases de apoyo y menús de baja alergenicidad en algunos restaurantes.</p><p>Conocer de antemano los apoyos disponibles y preguntar al personal puede ayudar a reducir la preocupación durante la visita.</p><p>¡Espero que esta guía sea útil para quienes estén pensando en visitar USJ!</p><p class="back"><a href="#top">Volver al principio</a></p></article>
+<article><h2 id="official">Información oficial</h2><ul><li><a href="https://www.usj.co.jp/web/en/us/service-guide/barrier-free" target="_blank" rel="noopener noreferrer">Guía de accesibilidad de USJ (inglés)</a></li><li><a href="https://www.usj.co.jp/web/en/us/service-guide/barrier-free/information" target="_blank" rel="noopener noreferrer">Información según las necesidades de los visitantes (inglés)</a></li><li><a href="https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction/food-allergies" target="_blank" rel="noopener noreferrer">Para visitantes con alergias alimentarias (inglés)</a></li><li><a href="https://usjfoodallergy.usj.co.jp/en/" target="_blank" rel="noopener noreferrer">Buscador de información sobre alérgenos (inglés)</a></li></ul></article>
+</main><footer><p>Chamu Blog | Universal Studios Japan</p><p>Esta es una guía personal independiente y no está afiliada ni gestionada por Universal Studios Japan.</p><p><time datetime="2026-10-13">Creado el 13 de octubre de 2026</time></p></footer>
+</body></html>

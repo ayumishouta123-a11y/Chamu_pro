@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="夢の国を、もっと安心して楽しむために">
+<title>Chamu Blog｜ディズニーのアクセシビリティ体験</title>
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#070b14;
+  --panel:#111a2a;
+  --panel2:#17243a;
+  --text:#f5f7ff;
+  --muted:#d2dced;
+  --accent:#8be9ff;
+  --accent2:#ffe58a;
+  --border:#49617e;
+  --link:#9be8ff;
+  --focus:#fff18a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Arial,"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  font-size:1.125rem;line-height:1.85;letter-spacing:.015em;
+}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em}
+a:hover{color:#fff;text-decoration-thickness:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:4px}
+.skip-link{position:absolute;left:-9999px;top:0;background:#fff;color:#000;padding:.75rem 1rem;z-index:10}
+.skip-link:focus{left:1rem;top:1rem}
+header,main,footer{width:min(100% - 2rem, 900px);margin-inline:auto}
+header{padding:2rem 0 1rem;text-align:center}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.2;color:var(--accent);margin:.3rem 0}
+.tagline{font-size:clamp(1.15rem,2.8vw,1.5rem);font-weight:700;color:var(--accent2);margin:.8rem 0 1.3rem}
+.hero{display:block;width:100%;max-width:680px;height:auto;max-height:420px;object-fit:cover;margin:1rem auto;border:2px solid var(--border);border-radius:1rem}
+.lang-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;list-style:none;padding:0;margin:1.2rem 0}
+.lang-nav a,.home-link{
+  display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:.65rem;
+  padding:.55rem .9rem;font-weight:700
+}
+main{padding:0 0 2rem}
+.contents,.content-section,.notice{
+  background:var(--panel);border:1px solid var(--border);border-radius:1rem;padding:1.25rem clamp(1rem,3vw,1.75rem);margin:1.25rem 0
+}
+h2{font-size:clamp(1.45rem,3.4vw,2rem);line-height:1.35;color:var(--accent);border-bottom:2px solid var(--border);padding-bottom:.5rem;margin-top:0}
+h3{font-size:1.2rem;color:var(--accent2);margin-bottom:.35rem}
+p,ul,ol{margin-top:.5rem}
+li{padding-left:.15rem;margin:.35rem 0}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:1rem}
+th,td{border:1px solid var(--border);padding:.75rem;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--accent)}
+.caption,.muted{color:var(--muted);font-size:.95rem}
+.notice{border-left:5px solid var(--accent2)}
+.notice strong{color:var(--accent2)}
+.food-photo{display:block;width:min(100%,220px);height:auto;border:1px solid var(--border);border-radius:.75rem;margin:1rem auto}
+.back-top{display:inline-block;margin-top:.5rem;font-weight:700}
+footer{border-top:1px solid var(--border);padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.95rem}
+address{font-style:normal}
+@media(max-width:600px){
+ body{font-size:1.05rem;line-height:1.8}
+ header,main,footer{width:min(100% - 1rem,900px)}
+ .contents,.content-section,.notice{padding:1rem;margin:.8rem 0;border-radius:.75rem}
+ table{display:block;overflow-x:auto;white-space:normal}
+ th,td{min-width:8rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header>
+  <h1>Chamu Blog</h1>
+  <p class="tagline">夢の国を、もっと安心して楽しむために</p>
+  <img class="hero" src="images/title.jpg" alt="遊園地を笑顔で歩く4人のイラスト。うち1人は白杖を持っている。" width="680" height="420">
+  <nav aria-label="言語切り替え">
+    <ul class="lang-nav">
+      <li><a href="dis_en.html">English</a></li>
+<li><a href="dis_es.html">Español</a></li>
+<li><a href="index.html">パーク選択トップ</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <nav class="contents" aria-label="目次">
+    <h2>目次</h2>
+    <ol><li><a href="#intro">はじめに</a></li>
+<li><a href="#das">DAS（ディスアビリティアクセスサービス）</a></li>
+<li><a href="#how">DASの利用方法</a></li>
+<li><a href="#food">レストランと食物アレルギー</a></li>
+<li><a href="#tickets">障がいのある方向けパークチケット</a></li>
+<li><a href="#end">まとめ</a></li></ol>
+  </nav>
+  <section class="content-section" aria-labelledby="intro">
+    <h2 id="intro">はじめに</h2>
+    <p>こんにちは、ちゃむです。大好きな東京ディズニーランドを訪れたときの体験を紹介します。私は視覚に障がいがあり、食物アレルギーもあります。キャストの方にサポートしていただいた経験が、これからパークへ行く方の参考になればうれしいです。</p>
+    <aside class="notice"><strong>体験談と公式情報について：</strong> ここで紹介するのは、私自身が訪れたときの体験と、公式案内をもとにした情報です。サービスの内容や運営は変更される場合があります。来園前に必ず公式情報をご確認ください。</aside>
+    <a class="back-top" href="#top">このページの先頭に戻る</a>
+  </section>
+  <section class="content-section" aria-labelledby="das">
+    <h2 id="das">DAS（ディスアビリティアクセスサービス）</h2>
+    <p>DASは、障がいなどにより対象施設の列に並ぶことが難しい方の負担を軽減するためのサービスです。利用条件を満たす方は、対象施設のキャストに相談してください。</p>
+    <h3>利用時のポイント</h3>
+    <p>本人が長時間列に並ぶことが難しい場合、グループ全員で列以外の場所で待機できます。待ち時間そのものが短くなるサービスではありません。待機中に別の対象施設を利用することはできません。</p>
+    <h3>対象となる証明書の例</h3>
+    <p>身体障害者手帳、精神障害者保健福祉手帳、療育手帳、被爆者健康手帳、戦傷病者手帳、対象となる障害福祉サービス等の受給者証、指定難病の受給者証など。海外からのゲストは、居住国の法令に基づく障がいに関する証明書を用意してください。対象の詳細は公式ページで確認してください。</p>
+    <aside class="notice">妊娠中の方、高齢の方、けがや病気などで一時的に列に並ぶことが難しい方には、状況に応じて「合流利用サービス」など別の案内があります。DASと同じサービスではないため、キャストに相談してください。</aside>
+    <p><a href="https://www.tokyodisneyresort.jp/tdr/bfree/supporttool.html">東京ディズニーリゾート公式情報 — DAS（ディスアビリティアクセスサービス）</a></p>
+    <a class="back-top" href="#top">このページの先頭に戻る</a>
+  </section>
+  <section class="content-section" aria-labelledby="how">
+    <h2 id="how">DASの利用方法</h2>
+    <ol><li>利用したい対象施設のキャストにDASを利用したいことを伝えます。</li><li>本人の対象証明書（原本または対応する障がい者手帳アプリ）と、グループ全員のパークチケットを提示します。</li><li>キャストの案内に従って登録します。本人確認のため写真撮影が行われる場合があります。</li><li>利用時は、登録に使用したパークチケットをキャストに提示し、案内に従います。</li></ol>
+    <p>対象証明書とパークチケットを用意し、スマートフォンを使う場合は充電も確認しておくと安心です。利用方法は変更されることがあるため、当日のキャストの案内を優先してください。</p>
+    <a class="back-top" href="#top">このページの先頭に戻る</a>
+  </section>
+  <section class="content-section" aria-labelledby="food">
+    <h2 id="food">レストランと食物アレルギー</h2>
+    <p>私は卵やシーフードのアレルギーがあり、食べられるメニューが分からず不安になることがあります。私が訪れた際には、キャストの方が確認を手伝ってくれたり、メニューを見やすい形で案内してくれたりして、とても助かりました。</p>
+    <img class="food-photo" src="images/food.jpg" alt="ベイマックスカレーの写真" width="220" height="300" loading="lazy">
+    <aside class="notice"><strong>大切な注意</strong> アレルギー対応や提供できるメニューは店舗・商品によって異なります。安全のため、注文前に必ずキャストへアレルギーを伝え、公式の食物アレルギー案内も確認してください。私の体験がすべての店舗で同じように提供されることを保証するものではありません。</aside>
+    <p>モバイルオーダーで食材の除去・変更を依頼できない場合があります。注文後に店舗で相談する必要があるケースもあるため、公式FAQを事前に確認してください。支払い方法もサービスや店舗によって異なる場合があります。</p>
+    <p><a href="https://faq.tokyodisneyresort.jp/">東京ディズニーリゾート公式情報 — 食物アレルギー・食事制限</a></p>
+    <a class="back-top" href="#top">このページの先頭に戻る</a>
+  </section>
+  <section class="content-section" aria-labelledby="tickets">
+    <h2 id="tickets">障がいのある方向けパークチケット</h2>
+    <p>東京ディズニーリゾートでは、対象の証明書を持つ方と同伴者1名が購入できる「1デーパスポート（障がいのある方向け）」が案内されています。各自1枚ずつのチケットが必要です。</p>
+    <h3>通常の1デーパスポート</h3>
+    <table>
+      <caption class="caption">公式サイト掲載の最低価格</caption>
+      <thead><tr><th scope="col">券種</th><th scope="col">大人（18歳以上）</th><th scope="col">中人（12～17歳）</th><th scope="col">小人（4～11歳）</th></tr></thead>
+      <tbody><tr><th scope="row">通常の1デーパスポート</th><td>8,900円～</td><td>7,400円～</td><td>5,300円～</td></tr></tbody>
+    </table>
+    <h3>障がいのある方向け1デーパスポート</h3>
+    <table>
+      <caption class="caption">公式サイト掲載の最低価格</caption>
+      <thead><tr><th scope="col">券種</th><th scope="col">大人（18歳以上）</th><th scope="col">中人（12～17歳）</th><th scope="col">小人（4～11歳）</th></tr></thead>
+      <tbody><tr><th scope="row">障がいのある方向け1デーパスポート</th><td>7,100円～</td><td>5,900円～</td><td>4,200円～</td></tr></tbody>
+    </table>
+    <aside class="notice">チケット料金は入園日・パークなどにより変動し、変更される場合があります。上記は2026年10月に確認した公式サイトの最低価格で、実際の購入額を示すものではありません。購入前に公式サイトで来園日を選択して確認してください。3歳以下は無料です。</aside>
+    <p><a href="https://www.tokyodisneyresort.jp/ticket/index.html">東京ディズニーリゾート公式情報 — 障がいのある方向けパークチケット</a></p>
+    <a class="back-top" href="#top">このページの先頭に戻る</a>
+  </section>
+  <section class="content-section" aria-labelledby="end">
+    <h2 id="end">まとめ</h2>
+    <p>パークには、障がいのある方や食事に制限がある方を支えるさまざまな案内があります。困ったときは遠慮せずキャストに相談し、自分に合うサポートを確認してみてください。私の体験が、誰かの安心につながればうれしいです。</p>
+    <h3>東京ディズニーリゾート公式情報</h3>
+    <ul><li><a href="https://www.tokyodisneyresort.jp/tdr/bfree/supporttool.html">バリアフリー・サポート</a></li>
+<li><a href="https://www.tokyodisneyresort.jp/ticket/index.html">パークチケット</a></li>
+<li><a href="https://faq.tokyodisneyresort.jp/">食物アレルギー・食事制限のFAQ</a></li></ul>
+    <p class="muted">情報確認日：2026年10月</p>
+    <a class="back-top" href="#top">このページの先頭に戻る</a>
+  </section>
+</main>
+<footer>
+  <address>投稿者：ちゃむ<br>Chamu Blog｜個人の体験をもとにした情報ブログ</address>
+</footer>
+</body>
+</html>

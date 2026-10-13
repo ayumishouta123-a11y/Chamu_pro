@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chamu Blog。ディズニーとユニバーサル・スタジオ・ジャパンのバリアフリー情報を選べます。">
+<title>Chamu Blog｜どちらのパークを調べる？</title>
+<style>
+:root{--ink:#22283a;--navy:#273b68;--pink:#ffe8f2;--blue:#e2f6ff;--link:#0645ad;--line:#c8d7e8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7f8fc;color:var(--ink);font-family:"Yu Gothic","Meiryo",sans-serif;line-height:1.8}
+a{color:var(--link);text-underline-offset:.18em}a:focus-visible{outline:3px solid #a51d68;outline-offset:4px}
+header{text-align:center;padding:2.5rem 1rem 2rem;background:linear-gradient(130deg,var(--pink),var(--blue));border-bottom:4px solid #c8e5f2}
+h1{font-size:clamp(2rem,6vw,3.2rem);color:var(--navy);margin:.2rem 0}header p{max-width:650px;margin:.5rem auto}
+main{max-width:1000px;margin:2rem auto;padding:0 1rem}.intro{text-align:center;margin:0 auto 1.5rem;max-width:760px}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.card{background:#fff;border:2px solid var(--line);border-radius:1.25rem;padding:clamp(1.1rem,3vw,2rem);box-shadow:0 5px 18px #1e34500d;display:flex;flex-direction:column;align-items:flex-start}
+.card.disney{border-top:8px solid #e9a7ce}.card.usj{border-top:8px solid #8bcce5}.symbol{font-size:2.5rem;line-height:1.3;margin:.2rem 0}.card h2{color:var(--navy);margin:.3rem 0;font-size:1.5rem}.card p{margin:.4rem 0 1rem}.jump{display:inline-block;margin-top:auto;background:#f0f5ff;border:2px solid #9eb7db;border-radius:.7rem;padding:.65rem 1rem;font-weight:700;text-decoration:none}.jump:hover{text-decoration:underline;background:#e4efff}
+.small{font-size:.95rem;color:#424b5d;margin-top:1.5rem}footer{text-align:center;border-top:1px solid var(--line);padding:1rem;margin-top:2rem;font-size:.9rem}
+@media(max-width:650px){.choices{grid-template-columns:1fr}.card{padding:1.2rem}}
+
+/* Accessible dark theme for the park-selection landing page */
+:root{color-scheme:dark;--ink:#f7f9ff;--navy:#70e7ff;--pink:#21182b;--blue:#132737;--link:#8feaff;--line:#45536a}
+html{background:#080b12;scroll-behavior:smooth}body{background:radial-gradient(ellipse at 50% 0%,#17243b 0%,#080b12 60%);color:#f7f9ff;font-size:1.08rem;line-height:1.9}
+a{color:#8feaff;font-weight:800;text-underline-offset:.2em}a:visited{color:#d5b7ff}a:hover{color:#ffe66d}a:focus-visible{outline:4px solid #ffe66d;outline-offset:5px}
+header{background:linear-gradient(135deg,#111a2b,#21182b 55%,#102432);color:#f7f9ff;border-bottom:3px solid #70e7ff;padding:clamp(2.5rem,7vw,5rem) 1rem;box-shadow:0 10px 40px #0008}
+h1{color:#fff!important;text-shadow:0 0 22px #70e7ff35;line-height:1.25}header p{color:#f7f9ff}
+main{max-width:1080px}.intro{color:#f7f9ff}.choices{gap:1.4rem}
+.card{background:linear-gradient(145deg,#151e2c,#10151f);color:#f7f9ff;border:1px solid #45536a;border-radius:1.25rem;padding:clamp(1.4rem,4vw,2.4rem);box-shadow:0 12px 32px #0006}
+.card.disney{border-top:7px solid #ff9fda}.card.usj{border-top:7px solid #70e7ff}.card h2{color:#70e7ff!important;font-size:clamp(1.45rem,3vw,1.8rem)}.card p{color:#f7f9ff}.symbol{font-size:3rem;filter:drop-shadow(0 0 12px #70e7ff25)}
+.jump{display:inline-block;margin-top:auto;background:#202e40;border:2px solid #70e7ff;color:#fff!important;border-radius:.75rem;padding:.8rem 1.15rem;font-weight:900;text-decoration:none}.jump:hover{background:#294358;border-color:#ffe66d;color:#ffe66d!important}
+.small{color:#d0d8e7}.small a{color:#8feaff}footer{border-top:1px solid #45536a;color:#d0d8e7}footer p{color:#d0d8e7}
+@media(max-width:650px){body{font-size:1rem}.choices{grid-template-columns:1fr}.card{padding:1.3rem}.jump{min-height:44px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+</style>
+</head>
+<body id="top">
+<header>
+<h1>Chamu Blog</h1>
+<p><strong>どっちのパークを調べる？</strong></p>
+<p>ディズニーとユニバーサル・スタジオ・ジャパン。お出かけ前に知っておきたい、視覚障害や食物アレルギーなどに関する情報をまとめています。</p>
+</header>
+<main>
+<section class="intro" aria-labelledby="choose-title">
+<h2 id="choose-title">行きたいパークを選んでね！</h2>
+<p>それぞれのページで、日本語・English・Españolを切り替えられます。</p>
+</section>
+<div class="choices">
+<section class="card disney" aria-labelledby="disney-title">
+<div class="symbol" aria-hidden="true">🏰</div>
+<h2 id="disney-title">東京ディズニーリゾート</h2>
+<p>ディズニーのバリアフリー情報や、ディスアビリティアクセスサービス（DAS）、レストランなどについて紹介します。</p>
+<a class="jump" href="dis.html">ディズニー編を読む（日本語） →</a>
+</section>
+<section class="card usj" aria-labelledby="usj-title">
+<div class="symbol" aria-hidden="true">🎢</div>
+<h2 id="usj-title">ユニバーサル・スタジオ・ジャパン</h2>
+<p>USJの視覚障害者向けサービス、ゲストサポート・パス、食物アレルギー対応などについて紹介します。</p>
+<a class="jump" href="usj.html">USJ編を読む（日本語） →</a>
+</section>
+</div>
+<p class="small">※このブログは個人が情報をまとめたもので、各パークの公式サイトではありません。サービス内容・利用条件・料金は変更される場合があるため、訪問前に公式情報をご確認ください。</p>
+</main>
+<footer><p>Chamu Blog｜Accessibility and theme parks</p><p><a href="#top">ページの先頭に戻る</a></p></footer>
+</body>
+</html>
